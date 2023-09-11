@@ -40,4 +40,4 @@ Your trainer will act as your Team Leader's Manager during this project and will
 
 ## How to start
 
-Fork and clone this repo and make your changes, elect a member of the team to do this. when you have
+Fork and clone this repo and make your changes, elect a member of the team to do this. when you have done this you can begin the challenge.
