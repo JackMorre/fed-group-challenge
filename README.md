@@ -37,3 +37,7 @@ Submissions will be in the form of a presentation on day 4 where I will collect 
 ## Support
 
 Your trainer will act as your Team Leader's Manager during this project and will support each team with any queries
+
+## How to start
+
+Fork and clone this repo and make your changes, elect a member of the team to do this. when you have
