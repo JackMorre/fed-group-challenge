@@ -1,3 +1,8 @@
+footer {
+  padding-top: 50px;
+  line-height: 1.5;
+  background-color: lightgray;
+}
 .footer-flex {
   width: 100%;
 }
@@ -8,18 +13,26 @@
 .cols {
   flex: 1;
   padding: 20px;
-  border: 1px solid gray;
   margin: 20px;
 }
 #footer-nav {
+  list-style-type: none;
+  text-align: left;
+}
+#footer-nav li a {
   text-decoration: none;
+  color: black;
 }
 #footer-contact-form {
-  text-align: center;
+}
+#contact-submit {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 #social-icons {
   width: 100%;
-  padding: 20px;
-  /* border: 1px solid gray; */
   text-align: center;
 }
