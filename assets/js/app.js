@@ -11,7 +11,14 @@ function displayImages() {
   if (index > images.length) {
     index = 1;
   }
-  images[index-1].style.display = "block";
+  images[index - 1].style.display = "block";
   setTimeout(displayImages, 4000); // Change image every 3.7 seconds
 }
 // end of iLi's stuff
+
+// nav bar
+const navBtn = document.querySelector(".svg-btn");
+
+navBtn.addEventListener("click", function () {
+  navBtn.parentElement.classList.toggle("open");
+});

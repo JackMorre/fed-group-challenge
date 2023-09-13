@@ -4,14 +4,70 @@
   box-sizing: border-box;
 }
 
+nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  z-index: 15;
+}
+
 /* iLi's stuff */
 #logo-img {
   height: 4.2vh;
   margin: 0.7rem;
 }
 
+#nav-section {
+  z-index: 15;
+  padding: unset !important;
+}
+
 .menu-text {
+  padding: 1rem 0;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  list-style: none;
+  background-color: white;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.open .menu-text {
+  top: 100%;
+}
+
+.menu-text li a {
+  text-decoration: none;
+}
+
+.svg-btn {
+  background-color: unset;
+  border: none;
+}
+
+.close {
   display: none;
+}
+
+.open .menu {
+  display: none;
+}
+
+.open .close {
+  display: block;
+}
+#hero-section {
+  padding: unset !important;
 }
 
 .image-slideshow {
@@ -29,25 +85,33 @@
 }
 
 .overlay::before {
-  content: '';
+  content: "";
   z-index: 10;
   width: 100%;
   height: 100%;
   display: block;
   position: absolute;
-  background: linear-gradient(320deg, rgba(225, 49, 49, 0.9) 20%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(
+    320deg,
+    rgba(225, 49, 49, 0.9) 20%,
+    rgba(0, 0, 0, 0) 100%
+  );
   z-index: 1;
 }
 
 .fade {
   /* animation-name: none; --if the fading is too much */
-  animation-name: fade; 
+  animation-name: fade;
   animation-duration: 1s;
 }
 
 @keyframes fade {
-  from {opacity: .8}
-  to {opacity: 1}
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 #first-word {
@@ -58,7 +122,7 @@
   color: rgb(255, 255, 255);
 }
 
-#hero-text{
+#hero-text {
   position: absolute;
   bottom: 2rem;
   right: 1rem;
@@ -145,6 +209,12 @@ section h2,
 }
 
 @media only screen and (min-width: 800px) {
+  .svg-btn {
+    display: none;
+    background-color: unset;
+    border: none;
+  }
+
   /* iLi's media */
   .image-slideshow img {
     height: 80vh;
@@ -152,9 +222,11 @@ section h2,
 
   .menu-text {
     display: flex;
+    flex-direction: row;
     justify-content: right;
+    position: unset;
   }
-  
+
   .menu-text li {
     padding: 2vh;
     list-style: none;
@@ -171,7 +243,7 @@ section h2,
     line-height: 7.5rem;
   }
 
-  #hero-text{
+  #hero-text {
     bottom: 6rem;
     right: 3.5rem;
     font-size: 3rem;
