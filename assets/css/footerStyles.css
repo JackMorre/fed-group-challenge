@@ -1,25 +1,52 @@
+footer {
+  padding-top: 50px;
+  line-height: 1.5;
+  background-color: lightgray;
+}
 .footer-flex {
   width: 100%;
-}
-
-.footer-flex {
   display: flex;
 }
 .cols {
   flex: 1;
   padding: 20px;
-  border: 1px solid gray;
   margin: 20px;
 }
-#footer-nav {
-  text-decoration: none;
+#footerContactDetails {
+  order: 1;
 }
-#footer-contact-form {
-  text-align: center;
+/* Styles for tablets */
+@media screen and (max-width: 768px) {
+  .footer-flex {
+    flex-direction: column;
+  }
+  .cols {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+/* Styles for mobile devices */
+@media screen and (max-width: 480px) {
+  .cols {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+#footer-nav {
+  list-style-type: none;
+}
+#footer-nav li a {
+  text-decoration: none;
+  color: black;
+}
+#contact-submit {
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
 }
 #social-icons {
   width: 100%;
-  padding: 20px;
-  /* border: 1px solid gray; */
   text-align: center;
 }
