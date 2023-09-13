@@ -4,6 +4,83 @@
   box-sizing: border-box;
 }
 
+/* iLi's stuff */
+#logo-img {
+  height: 4.2vh;
+  margin: 0.7rem;
+}
+
+.menu-text {
+  display: none;
+}
+
+.image-slideshow {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* change the height of the images & gradient here: */
+.image-slideshow img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.overlay::before {
+  content: '';
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(320deg, rgba(225, 49, 49, 0.9) 20%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
+.fade {
+  /* animation-name: none; --if the fading is too much */
+  animation-name: fade; 
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {opacity: .8}
+  to {opacity: 1}
+}
+
+#first-word {
+  font-size: 3.5rem;
+  font-weight: 1000;
+  letter-spacing: 0.6rem;
+  line-height: 3.3rem;
+  color: rgb(255, 255, 255);
+}
+
+#hero-text{
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+  direction: rtl;
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.462);
+  letter-spacing: 0.3rem;
+  word-spacing: 0.5rem;
+  z-index: 2;
+  line-height: 1.5rem;
+}
+
+#hero-button {
+  border: none;
+  border-radius: 0.8rem;
+  margin: 0;
+  padding: 1rem;
+  background-color: white;
+}
+/* iLi's end of stuff */
+
 section {
   padding: 4rem 1rem 0 1rem;
   max-width: 1000px;
@@ -68,6 +145,44 @@ section h2,
 }
 
 @media only screen and (min-width: 800px) {
+  /* iLi's media */
+  .image-slideshow img {
+    height: 80vh;
+  }
+
+  .menu-text {
+    display: flex;
+    justify-content: right;
+  }
+  
+  .menu-text li {
+    padding: 2vh;
+    list-style: none;
+  }
+
+  #logo-img {
+    height: 8vh;
+  }
+
+  #first-word {
+    font-size: 7rem;
+    font-weight: 1000;
+    letter-spacing: 0.9rem;
+    line-height: 7.5rem;
+  }
+
+  #hero-text{
+    bottom: 6rem;
+    right: 3.5rem;
+    font-size: 3rem;
+    word-spacing: 1.3rem;
+    letter-spacing: 0.7rem;
+    line-height: 3rem;
+    font-weight: 600;
+  }
+
+  /* iLi's end of media */
+
   .gallery-grid-c {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
