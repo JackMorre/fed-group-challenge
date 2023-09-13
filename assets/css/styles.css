@@ -4,6 +4,147 @@
   box-sizing: border-box;
 }
 
+nav {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  z-index: 15;
+}
+
+/* iLi's stuff */
+#logo-img {
+  height: 4.2vh;
+  margin: 0.7rem;
+}
+
+#nav-section {
+  z-index: 15;
+  padding: unset !important;
+}
+
+.menu-text {
+  padding: 1rem 0;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  list-style: none;
+  background-color: white;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+.open .menu-text {
+  top: 100%;
+}
+
+.menu-text li a {
+  text-decoration: none;
+}
+
+.svg-btn {
+  background-color: unset;
+  border: none;
+}
+
+.close {
+  display: none;
+}
+
+.open .menu {
+  display: none;
+}
+
+.open .close {
+  display: block;
+}
+#hero-section {
+  padding: unset !important;
+}
+
+.image-slideshow {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* change the height of the images & gradient here: */
+.image-slideshow img {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.overlay::before {
+  content: "";
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(
+    320deg,
+    rgba(225, 49, 49, 0.9) 20%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 1;
+}
+
+.fade {
+  /* animation-name: none; --if the fading is too much */
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#first-word {
+  font-size: 3.5rem;
+  font-weight: 1000;
+  letter-spacing: 0.6rem;
+  line-height: 3.3rem;
+  color: rgb(255, 255, 255);
+}
+
+#hero-text {
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+  direction: rtl;
+  font-size: 1.5rem;
+  font-weight: 550;
+  color: rgba(255, 255, 255, 0.462);
+  letter-spacing: 0.3rem;
+  word-spacing: 0.5rem;
+  z-index: 2;
+  line-height: 1.5rem;
+}
+
+#hero-button {
+  border: none;
+  border-radius: 0.8rem;
+  margin: 0;
+  padding: 1rem;
+  background-color: white;
+}
+/* iLi's end of stuff */
+
 section {
   padding: 4rem 1rem 0 1rem;
   max-width: 1000px;
@@ -67,7 +208,121 @@ section h2,
   transform: scale(100%);
 }
 
+/*BANNER SECTION START*/
+.discount-banner {
+  border: 1px solid black;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  background: linear-gradient(10deg, red, orange, white);
+}
+
+.discount-code {
+  border: 1px solid black;
+  border-radius: 2rem;
+  display: inline-block;
+  padding: 1rem;
+  font-size: 0.8rem;
+  background-color: white;
+}
+/*BANNER SECTION END*/
+
+/*BAG VARIATION SECTION START*/
+.bag-variation-section {
+  margin: 2rem 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.bag-variation {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.bag-variation-container {
+  border: 1px solid black;
+  padding: 2rem;
+  text-align: center;
+  text-align: justify;
+}
+
+.bag-variation-img img {
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.price {
+  padding-top: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.bag-varition-btn {
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  border: none;
+}
+
+.bag-varition-btn:hover {
+  background: linear-gradient(10deg, red, orange, white);
+  color: white;
+}
+/*BAG VARIATION SECTION START*/
+
 @media only screen and (min-width: 800px) {
+  .svg-btn {
+    display: none;
+    background-color: unset;
+    border: none;
+  }
+
+  /* iLi's media */
+  .image-slideshow img {
+    height: 80vh;
+  }
+
+  .menu-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    position: unset;
+  }
+
+  .menu-text li {
+    padding: 2vh;
+    list-style: none;
+  }
+
+  #logo-img {
+    height: 8vh;
+  }
+
+  #first-word {
+    font-size: 7rem;
+    font-weight: 1000;
+    letter-spacing: 0.9rem;
+    line-height: 7.5rem;
+  }
+
+  #hero-text {
+    bottom: 6rem;
+    right: 3.5rem;
+    font-size: 3rem;
+    word-spacing: 1.3rem;
+    letter-spacing: 0.7rem;
+    line-height: 3rem;
+    font-weight: 600;
+  }
+
+  /* iLi's end of media */
+
   .gallery-grid-c {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
@@ -88,5 +343,16 @@ section h2,
   .about-img-c img {
     height: 600px;
     transform: translateY(-20%);
+  }
+  .discount-code {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+  }
+  .bag-variation-container {
+    text-align: center;
+  }
+  .bag-variation {
+    flex-direction: row;
   }
 }
