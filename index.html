@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acme Inc</title>
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/footerStyles.css">
   </head>
 
   <body>
@@ -108,24 +110,18 @@
           </p>
         </div>
         <div class="about-img-c">
-          <img
-            src="/assets/img/about-us.webp"
-            alt="Photo of bag being held by man"
-          />
+          <img src="/assets/img/about-us.webp" alt="Photo of bag being held by man" />
         </div>
       </div>
     </section>
     <section class="gallery">
-      <h2>Gallary</h2>
+      <h2>Gallery</h2>
       <div class="gallery-grid-c">
         <div class="image-c">
           <img src="/assets/img/gallery/photo1.webp" alt="" />
         </div>
         <div class="image-c">
-          <img
-            src="/assets/img/josiah-weiss-8sjBzL1IyMo-unsplash.webp"
-            alt=""
-          />
+          <img src="/assets/img/josiah-weiss-8sjBzL1IyMo-unsplash.webp" alt="" />
         </div>
         <div class="image-c">
           <img src="/assets/img/gallery/photo2.webp" alt="" />
@@ -143,13 +139,134 @@
           <img src="/assets/img/gallery/photo5.webp" alt="" />
         </div>
         <div class="image-c">
-          <img
-            src="/assets/img/gallery/photo6.webp"
-            alt="Backpack on a mountain"
-          />
+          <img src="/assets/img/gallery/photo6.webp" alt="Backpack on a mountain" />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="discount-banner">
+        <div>
+          <h2>Super Sale</h2>
+          <p>Get Discount up to 70% OFF</p>
+        </div>
+
+        <div class="discount-code">
+          <p>CODE: <b>HD2KR83MDJ2A42</b></p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="bag-variation-section">
+        <div class="bag-variation">
+          <div class="bag-variation-container">
+            <div class="bag-variation-img">
+              <img
+                src="./assets/img/fjallraven.weekender.jpg"
+                alt="Weekender Bag"
+              />
+            </div>
+            <h2>Kanken Weekender</h2>
+            <p>
+              This 30L Kånken is the perfect companion for those who need some
+              extra room in their bag for a weekend away. Inspired by the
+              classic duffel bag, the Kånken Weekender can be carried in three
+              ways: as a simple hold-all, a crossbody bag, or as a backpack by
+              turning it on its side and using the padded shoulder straps.
+            </p>
+            <p class="price">£185.00</p>
+            <button
+              class="bag-varition-btn"
+              onclick="location.href='https://www.fjallraven.com/uk/en-gb/bags-gear/kanken/kanken-bags/kanken-weekender?v=F23802::7323450899318'"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="bag-variation-container">
+            <div class="bag-variation-img">
+              <img src="./assets/img/kanken.jpg" alt="Weekender Bag" />
+            </div>
+            <h2>Kanken Laptop</h2>
+            <p>
+              Laptop version of Kånken backpack – Kånken Laptop 17" is made from
+              hardwearing Vinylon F fabric and has a separate, padded
+              compartment that provides safe storage for a 17” laptop computer.
+              It has an extra zippered pocket inside the main compartment,
+              zippered pocket on the front, two side pockets and comfortable
+              padded shoulder straps.
+            </p>
+            <p class="price">£100.00</p>
+            <button
+              class="bag-varition-btn"
+              onclick="location.href='https://www.fjallraven.com/uk/en-gb/bags-gear/kanken/kanken-bags/kanken-laptop-172?v=F23525%3a%3a7323450785864'"
+            >
+              Buy Now
+            </button>
+          </div>
+          <div class="bag-variation-container">
+            <div class="bag-variation-img">
+              <img src="./assets/img/tote.jpg" alt="Weekender Bag" />
+            </div>
+            <h2>Kanken Totepack Mini</h2>
+            <p>
+              Kånken Totepack Mini is a convertible version of Fjällräven’s
+              iconic backpack and can be either a backpack when you bike or a
+              shoulder bag when you board a crowded bus. It has a zippered main
+              compartment and an inside pocket with a padded base for a tablet.
+            </p>
+            <p class="price">£90.00</p>
+            <button
+              class="bag-varition-btn"
+              onclick="location.href='https://www.fjallraven.com/uk/en-gb/kids/backpacks/kanken-totepack-mini'"
+            >
+              Buy Now
+            </button>
+          </div>
         </div>
       </div>
     </section>
     <script type="module" src="assets/js/app.js"></script>
+
+    <footer>
+      <h1>Heading</h1>
+      <div class="footer-flex">
+        <div class="cols" id="footerContactDetails">
+          <p>Email: <a href="mailto:info@example.com">info@britpack.nowhere</a></p>
+          <p>Phone: (+44) 123-4567</p>
+        </div>
+        <div class="cols" id="footer-nav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="cols" id="footer-contact-form">
+          <h2>Get in Touch</h2>
+          <form action="" method="get">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+            <br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" placeholder="Please write your message in this box"
+              required></textarea>
+            <br>
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+      <div id="social-icons">
+        <a href="#" class="facebook-icon">Facebook</a>
+        <a href="#" class="twitter-icon">Twitter</a>
+        <a href="#" class="linkedin-icon">LinkedIn</a>
+        <p>&copy; 2023 BritPack</p>
+      </div>
+
+    </footer>
+
   </body>
+
 </html>
