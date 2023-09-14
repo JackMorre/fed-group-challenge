@@ -2,9 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
 }
 
-#nav-section {
+html {
+  font-size: 16px;
 }
 
 nav {
@@ -49,8 +51,22 @@ nav {
   top: 100%;
 }
 
-.menu-text li a {
+.menu-text li a:visited,
+.menu-text li a:link,
+#footer-nav li a:visited,
+#footer-nav li a:link {
   text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-text li a:hover,
+.menu-text li a:active,
+#footer-nav li a:hover,
+#footer-nav li a:active {
+  color: RGB(226 52 55);
 }
 
 .svg-btn {
@@ -156,7 +172,8 @@ nav {
   position: absolute;
 }
 
-section {
+section,
+.footer-c {
   padding: 4rem 1rem 0 1rem;
   max-width: 1000px;
   margin: 0 auto;
@@ -220,20 +237,31 @@ section {
 
 /*BANNER SECTION START*/
 .discount-banner {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 1rem;
   display: flex;
   justify-content: space-evenly;
   background: linear-gradient(10deg, red, orange, white);
+  align-items: center;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+
+.discount-text-c {
+  text-align: center;
 }
 
 .discount-code {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 2rem;
   display: inline-block;
   padding: 1rem;
   font-size: 0.8rem;
-  background-color: white;
+  /* background-color: white; */
+}
+
+.discount-code p {
+  font-size: 1rem;
 }
 /*BANNER SECTION END*/
 
@@ -246,26 +274,29 @@ section {
 
 .bag-variation {
   display: flex;
-  gap: 2rem;
+  /* gap: 2rem; */
+  justify-content: space-between;
   flex-direction: column;
 }
 
 .bag-variation-container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 2rem;
-  text-align: center;
-  text-align: justify;
+  padding-top: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
 
 .bag-variation-img img {
   border: 1px solid black;
   border-radius: 2rem;
   padding: 1rem;
-  margin-bottom: 1rem;
 }
 
 .price {
-  padding-top: 1rem;
   font-weight: bold;
   font-size: 2rem;
   text-align: center;
@@ -275,12 +306,16 @@ section {
   width: 100%;
   padding: 0.5rem;
   cursor: pointer;
-  margin-top: 1rem;
   border: none;
+  transition: all 0.3s ease-in-out;
+  /* background-image: rgb(224, 224, 224); */
+  background-color: rgb(224, 224, 224);
+  color: black;
 }
 
 .bag-varition-btn:hover {
-  background: linear-gradient(10deg, red, orange, white);
+  background-color: RGB(226 52 55);
+  /* background-image: linear-gradient(10deg, red, orange, white); */
   color: white;
 }
 /*BAG VARIATION SECTION START*/
@@ -352,11 +387,15 @@ section {
     height: 600px;
     transform: translateY(-20%);
   }
+  .discount-banner {
+    flex-direction: unset;
+  }
   .discount-code {
     padding: 0.5rem;
     margin: 0.5rem;
     font-size: 1rem;
   }
+
   .bag-variation-container {
     text-align: center;
   }
