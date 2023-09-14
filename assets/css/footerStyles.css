@@ -1,7 +1,6 @@
 footer {
-  line-height: 1.5;
-  background-color: lightgray;
   margin-top: 4rem;
+  background-color: #e23934;
 }
 
 .footer-c {
@@ -15,7 +14,7 @@ footer {
   display: flex;
   gap: 2rem;
   justify-content: space-between;
-  align-items: unset;
+  align-items: center;
 }
 
 .cols {
@@ -23,10 +22,19 @@ footer {
   flex-direction: column;
   align-items: center;
   width: 33%;
+  height: 100%;
 }
 
 .cols:nth-child(2) {
   order: -1;
+}
+
+.cols:nth-child(3) {
+  order: 1;
+}
+
+.cols:nth-child(1) {
+  order: 3;
 }
 
 textarea {
@@ -34,14 +42,25 @@ textarea {
 }
 
 #social-icons a svg {
-  fill: #000000;
+  fill: white;
   transition: all 0.2s ease-in-out;
 }
 
 #social-icons a:hover svg {
-  fill: RGB(226 52 55);
+  fill: rgb(187, 187, 187);
 }
 
+#footer-nav li a:visited,
+#footer-nav li a:link {
+  color: white;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+#footer-nav li a:hover,
+#footer-nav li a:active {
+  color: rgb(187, 187, 187);
+}
 /* Styles for tablets */
 @media screen and (max-width: 768px) {
   .footer-flex {
@@ -75,11 +94,21 @@ textarea {
 #contact-submit {
   background-color: white;
   color: black;
-  padding: 10px 20px;
+  padding: 0.5rem 2rem;
   border: none;
   cursor: pointer;
+  border-radius: 1rem;
 }
 #social-icons {
   width: 100%;
   text-align: center;
+}
+
+.cols * {
+  color: white;
+  text-align: center;
+}
+
+#social-icons p {
+  color: white;
 }

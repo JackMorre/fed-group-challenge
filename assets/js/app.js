@@ -21,4 +21,28 @@ const navBtn = document.querySelector(".svg-btn");
 
 navBtn.addEventListener("click", function () {
   navBtn.parentElement.classList.toggle("open");
+  const ariaEx = navBtn.getAttribute("aria-expanded");
+  if (ariaEx === "false") {
+    navBtn.setAttribute("aria-expanded", "true");
+  } else {
+    navBtn.setAttribute("aria-expanded", "false");
+  }
 });
+
+const links = document.querySelectorAll("ul a");
+
+for (const link of links) {
+  link.addEventListener("click", clickHandler);
+}
+function clickHandler(e) {
+  e.preventDefault();
+  if (navBtn.parentElement.classList.contains("open") === true) {
+    navBtn.parentElement.classList.toggle("open");
+  }
+  const href = this.getAttribute("href");
+  const offsetTop = document.querySelector(href).offsetTop;
+  scroll({
+    top: offsetTop,
+    behavior: "smooth",
+  });
+}

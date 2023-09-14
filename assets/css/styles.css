@@ -9,6 +9,10 @@ html {
   font-size: 16px;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 nav {
   padding: 1rem;
   display: flex;
@@ -19,15 +23,26 @@ nav {
   z-index: 15;
 }
 
+.nav-cta {
+  background-color: RGB(226 52 55);
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  color: white;
+}
+
 /* iLi's stuff */
 #logo-img {
-  height: 4.2vh;
+  height: 2rem;
   margin: 0.7rem;
 }
 
 #nav-section {
   z-index: 15;
   padding: unset !important;
+}
+
+.svg-btn svg {
+  fill: RGB(226 52 55);
 }
 
 .menu-text {
@@ -52,21 +67,34 @@ nav {
 }
 
 .menu-text li a:visited,
-.menu-text li a:link,
-#footer-nav li a:visited,
-#footer-nav li a:link {
+.menu-text li a:link {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 700;
-  color: black;
   transition: all 0.2s ease-in-out;
+  color: black;
 }
 
 .menu-text li a:hover,
-.menu-text li a:active,
-#footer-nav li a:hover,
-#footer-nav li a:active {
+.menu-text li a:active {
   color: RGB(226 52 55);
+}
+
+.nav-cta:visited,
+.nav-cta:link {
+  background-color: RGB(226 52 55);
+  padding: 0.5rem 2rem;
+  border-radius: 1rem;
+  border: 2px solid RGB(226 52 55);
+  color: white !important;
+  transition: all 0.3 ease-in-out;
+}
+
+.nav-cta:hover,
+.nav-cta:active {
+  background-color: white;
+
+  color: RGB(226 52 55) !important;
 }
 
 .svg-btn {
@@ -185,7 +213,7 @@ section,
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -211,7 +239,7 @@ section,
 
 .about-img-c img {
   max-width: 500px;
-  height: 425px;
+  height: 650px;
 }
 
 .gallery-grid-c {
@@ -222,6 +250,7 @@ section,
 
 .image-c {
   height: 140px;
+  width: 200px;
   overflow: hidden;
 }
 
@@ -232,7 +261,13 @@ section,
 .image-c img {
   transition: all 0.3s ease-in-out;
   width: 220px;
+  height: 150px;
   transform: scale(100%);
+}
+
+.landscape {
+  width: 100% !important;
+  height: 250px !important;
 }
 
 /*BANNER SECTION START*/
@@ -241,27 +276,33 @@ section,
   padding: 1rem;
   display: flex;
   justify-content: space-evenly;
-  background: linear-gradient(10deg, red, orange, white);
+  background-color: RGB(226 52 55);
   align-items: center;
   border-radius: 1rem;
+  gap: 1rem;
   flex-direction: column;
 }
 
 .discount-text-c {
   text-align: center;
+  color: white;
 }
 
 .discount-code {
   /* border: 1px solid black; */
   border-radius: 2rem;
   display: inline-block;
-  padding: 1rem;
   font-size: 0.8rem;
   /* background-color: white; */
 }
 
 .discount-code p {
   font-size: 1rem;
+  color: white;
+}
+
+.bag-variation-container h2 {
+  color: RGB(226 52 55);
 }
 /*BANNER SECTION END*/
 
@@ -270,6 +311,11 @@ section,
   /* margin: 2rem 1rem; */
   display: flex;
   justify-content: space-around;
+}
+
+.bag-var-title {
+  text-align: center;
+  padding-bottom: 1rem;
 }
 
 .bag-variation {
@@ -311,6 +357,7 @@ section,
   /* background-image: rgb(224, 224, 224); */
   background-color: rgb(224, 224, 224);
   color: black;
+  border-radius: 1rem;
 }
 
 .bag-varition-btn:hover {
@@ -321,6 +368,10 @@ section,
 /*BAG VARIATION SECTION START*/
 
 @media only screen and (min-width: 800px) {
+  .about-img-c img {
+    height: 425px;
+  }
+
   .svg-btn {
     display: none;
     background-color: unset;
@@ -344,7 +395,7 @@ section,
   }
 
   #logo-img {
-    height: 8vh;
+    height: 3rem;
   }
 
   #first-word {
