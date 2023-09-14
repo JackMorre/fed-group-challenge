@@ -61,7 +61,7 @@ nav {
   list-style: none;
   background-color: white;
   z-index: 10;
-  transition: all 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
 }
 
 .open + .menu-text {
@@ -373,6 +373,9 @@ section,
 /*BAG VARIATION SECTION START*/
 
 @media only screen and (min-width: 800px) {
+  #nav-section {
+    display: flex;
+  }
   .about-img-c img {
     height: 425px;
   }
@@ -389,9 +392,11 @@ section,
   }
 
   .menu-text {
+    padding: unset;
     display: flex;
     flex-direction: row;
     justify-content: right;
+    top: 0;
     position: unset;
   }
 
