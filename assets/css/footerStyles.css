@@ -61,6 +61,10 @@ textarea {
 #footer-nav li a:active {
   color: rgb(187, 187, 187);
 }
+
+#message {
+  width: 100%;
+}
 /* Styles for tablets */
 @media screen and (max-width: 768px) {
   .footer-flex {

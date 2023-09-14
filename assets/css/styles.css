@@ -20,7 +20,7 @@ nav {
   align-items: center;
   background-color: white;
   position: relative;
-  z-index: 15;
+  z-index: 11;
 }
 
 .nav-cta {
@@ -37,8 +37,9 @@ nav {
 }
 
 #nav-section {
-  z-index: 15;
   padding: unset !important;
+  position: relative;
+  background-color: red;
 }
 
 .svg-btn svg {
@@ -47,6 +48,7 @@ nav {
 
 .menu-text {
   padding: 1rem 0;
+  padding-bottom: 2rem;
   position: absolute;
   top: -100vh;
   left: 0;
@@ -58,11 +60,11 @@ nav {
   align-items: center;
   list-style: none;
   background-color: white;
-  z-index: -1;
+  z-index: 10;
   transition: all 0.3s ease-in-out;
 }
 
-.open .menu-text {
+.open + .menu-text {
   top: 100%;
 }
 
@@ -163,10 +165,10 @@ nav {
 }
 
 #first-word {
-  font-size: 3.5rem;
-  font-weight: 1000;
+  font-size: 2.5rem;
+  font-weight: 700;
   letter-spacing: 0.6rem;
-  line-height: 3.3rem;
+  line-height: 0.5rem;
   color: rgb(255, 255, 255);
 }
 
@@ -187,9 +189,12 @@ nav {
 #hero-button {
   border: none;
   border-radius: 0.8rem;
-  margin: 0;
-  padding: 1rem;
+  margin-top: 1rem;
+  padding: 0.25rem 1rem;
   background-color: white;
+  text-transform: uppercase;
+  color: RGB(226 52 55);
+  font-weight: 700;
 }
 /* iLi's end of stuff */
 
@@ -390,6 +395,25 @@ section,
     position: unset;
   }
 
+  #hero-button {
+    font-size: 1.5rem;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    padding: 0.25rem 2rem;
+    background-color: white;
+    text-transform: uppercase;
+    color: RGB(226 52 55);
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #hero-button:hover {
+    background-color: RGB(226 52 55);
+    color: white;
+  }
+
   .menu-text li {
     list-style: none;
   }
@@ -402,12 +426,12 @@ section,
     font-size: 7rem;
     font-weight: 1000;
     letter-spacing: 0.9rem;
-    line-height: 7.5rem;
+    line-height: 4.5rem;
   }
 
   #hero-text {
-    bottom: 6rem;
-    right: 3.5rem;
+    bottom: 1rem;
+    right: 1rem;
     font-size: 3rem;
     word-spacing: 1.3rem;
     letter-spacing: 0.7rem;
